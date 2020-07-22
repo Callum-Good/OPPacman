@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A152562D-2C56-49F2-A20C-BF743D1CC6A5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Pacman</RootNamespace>
+    <AssemblyName>Pacman</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Character.cs" />
+    <Compile Include="Controller.cs" />
+    <Compile Include="Direction.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ghost.cs" />
+    <Compile Include="Maze.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pac.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kibble.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wall.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blank.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pacman1up.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pacman1left.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pacman1right.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pacman2right.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pacman2up.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pacman1down.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pacman2down.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pacman2left.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\star.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\purple1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wall %283%29.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\purple2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green2.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\collide.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\death %282%29.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Death.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EndGame.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FruitEat.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\intro.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KibbleEat.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pacman_beginning.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pacman_chomp.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pacman_death.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pacman_extrapac.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pacman_intermission.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\portal.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wakka.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\win.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pacmanblood.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-pac-man-logo-font-brand-clip-art-video-game-fashion-pac-man-college-fashion-5b665bc845fef2.8544750115334348242867.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pacman-Online.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
